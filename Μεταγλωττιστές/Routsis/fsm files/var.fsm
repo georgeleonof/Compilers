@@ -1,0 +1,16 @@
+START=Q0
+
+Q0: "?"	-> Q1
+	*	-> BAD
+
+Q1: 0-9	-> Q2
+	A-Z	-> Q2
+	a-z	-> Q2
+	*	-> BAD
+
+Q2: 0-9	-> Q2
+	A-Z	-> Q2
+	a-z	-> Q2
+	\n	-> GOOD
+	*	-> BAD	
+GOOD(OK):

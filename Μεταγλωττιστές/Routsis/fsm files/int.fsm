@@ -1,0 +1,10 @@
+START=Q0
+Q0:		\+\- -> Q1
+		1-9  ->	Q2
+		*	 -> BAD 
+Q1:		1-9	-> Q2
+		*	-> BAD
+Q2:		0-9	-> Q2
+		\n	-> GOOD
+		*	-> BAD
+GOOD(OK):

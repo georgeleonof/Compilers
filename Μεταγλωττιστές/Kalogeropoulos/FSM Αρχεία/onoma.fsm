@@ -1,0 +1,12 @@
+START=Q0
+Q0:		A-Z ->	Q1 
+		a-z ->	Q1
+		* ->	BAD
+Q1:		A-Z -> 	Q1
+		a-z -> 	Q1
+		0-9 -> 	Q1
+		_ 	->	Q1
+		- 	->	Q1
+		\n ->	GOOD
+		*	->	BAD
+GOOD(OK):
